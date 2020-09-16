@@ -1,5 +1,9 @@
 # chaojigongshi-other-miners
-docker run -d --name joinEddthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/data:/data zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-1.0
+## 生产环境
+docker run -d --name joinEddthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/data:/data -v $PWD/genesis:/genesis zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-1.0
+## 测试环境
+docker run -d --name joinEddthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/genesis:/genesis zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-1.0-ubuntu
+
 
 docker exec -it joinEthNode /bin/sh
 
