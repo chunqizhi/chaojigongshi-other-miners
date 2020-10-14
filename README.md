@@ -1,8 +1,8 @@
 # chaojigongshi-other-miners
 ## 生产环境
-docker run -d --name joinEthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/command:/usr/local/bin -v $PWD/data:/data -v $PWD/genesis:/genesis zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-2.0
+docker run -d --name joinEthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/command:/usr/local/bin -v $PWD/data:/data -v $PWD/genesis:/genesis zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-gst
 ## 测试环境
-docker run -d --name joinEthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/command:/usr/local/bin -v $PWD/genesis:/genesis zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-2.0-update
+docker run -d --name joinEthNode -p 30303:30303/tcp -p 30303:30303/udp -p 8545:8545 -p 8546:8546 -v $PWD/command:/usr/local/bin -v $PWD/genesis:/genesis zfq17876911936/chaojigongshi-ethereum-client-go:btc-miningPool-gst
 
 
 docker exec -it joinEthNode /bin/sh
